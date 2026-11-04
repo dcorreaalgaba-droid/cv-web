@@ -150,6 +150,7 @@ svg { width: 1.1em; height: 1.1em; flex: none; }
 }
 .tile img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .tile-text { background: var(--accent-soft); color: var(--accent); font-size: .84rem; font-weight: 700; font-stretch: 112%; }
+.tile-wide { width: 7.5rem; }
 .tile-small { width: 1.85rem; height: 1.85rem; border: 0; border-radius: .45rem; }
 
 /* Secciones */

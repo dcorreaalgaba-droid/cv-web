@@ -5,6 +5,7 @@
  */
 window.CV = {
   name: ["David", "Correa"],
+  fullName: "David Correa Algaba", // para buscadores, pie y descripciones
   photo: "assets/foto.jpg",
   email: ["dcorreaalgaba", "gmail.com"], // se une en el navegador para dificultar el spam
   linkedin: "https://www.linkedin.com/in/davidcorreaalg/",
@@ -23,18 +24,16 @@ window.CV = {
     "CFA Institute": ["cfa"],
     "IEB": ["ieb"],
     "Mirabal International School": ["mirabal"],
+    "Programa Erasmus+": ["erasmus"],
+    "Erasmus+ Programme": ["erasmus"],
   },
-  // Siglas para quien no tenga logo
-  monograms: {
-    "Programa Erasmus+": "E+",
-    "Erasmus+ Programme": "E+",
-  },
+  wideLogos: ["erasmus"], // logos apaisados, en un recuadro más ancho
 
   es: {
     meta: {
-      title: "David Correa | Controller · Digitalización, automatización e IFRS 9",
+      title: "David Correa Algaba | Controller · Digitalización, automatización e IFRS 9",
       description:
-        "CV de David Correa, controller de digitalización y automatización en Madrid, con experiencia en banca: IFRS 9, coberturas contables, tesorería y reporting.",
+        "CV de David Correa Algaba, controller de digitalización y automatización en Madrid, con experiencia en banca: IFRS 9, coberturas contables, tesorería y reporting.",
     },
     ui: {
       skip: "Saltar al contenido",
@@ -185,9 +184,9 @@ window.CV = {
 
   en: {
     meta: {
-      title: "David Correa | Controller · Digitalisation, Automation & IFRS 9",
+      title: "David Correa Algaba | Controller · Digitalisation, Automation & IFRS 9",
       description:
-        "CV of David Correa, a digitalisation and automation controller in Madrid with banking experience: IFRS 9, hedge accounting, treasury and reporting.",
+        "CV of David Correa Algaba, a digitalisation and automation controller in Madrid with banking experience: IFRS 9, hedge accounting, treasury and reporting.",
     },
     ui: {
       skip: "Skip to content",

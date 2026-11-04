@@ -21,9 +21,9 @@
 
   const tile = (name, extra = "") => {
     const logos = cv.logos[name];
-    if (!logos) return `<span class="tile tile-text ${extra}" aria-hidden="true">${esc(cv.monograms[name] || initials(name))}</span>`;
+    if (!logos) return `<span class="tile tile-text ${extra}" aria-hidden="true">${esc(initials(name))}</span>`;
     return `<span class="tiles">${logos
-      .map((l) => `<span class="tile ${extra}"><img src="assets/logos/${esc(l)}.jpg" alt="" width="100" height="100"></span>`)
+      .map((l) => `<span class="tile ${extra} ${cv.wideLogos.includes(l) ? "tile-wide" : ""}"><img src="assets/logos/${esc(l)}.jpg" alt="" width="100" height="100"></span>`)
       .join("")}</span>`;
   };
   const chips = (items) =>
@@ -84,7 +84,7 @@
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="shell hero-grid">
           <div class="hero-copy">
-            ${cv.photo ? `<img class="hero-photo" src="${esc(cv.photo)}" alt="${esc(fullName)}" width="400" height="400">` : ""}
+            ${cv.photo ? `<img class="hero-photo" src="${esc(cv.photo)}" alt="${esc(cv.fullName)}" width="400" height="400">` : ""}
             <p class="eyebrow">${esc(t.hero.eyebrow)}</p>
             <h1 id="hero-title" class="hero-name">${cv.name.map((n) => `<span>${esc(n)}</span>`).join(" ")}</h1>
             <p class="hero-roles">${t.hero.roles.map((r) => `<span>${esc(r)}</span>`).join("")}</p>
@@ -260,7 +260,7 @@
       renderHero(t) + renderExperience(t) + renderEducation(t) + renderSkills(t) + renderContact(t);
     document.getElementById("footer").innerHTML = `
       <div class="shell footer-inner">
-        <span>© ${new Date().getFullYear()} ${esc(fullName)}</span>
+        <span>© ${new Date().getFullYear()} ${esc(cv.fullName)}</span>
         <span>${esc(t.ui.footer)}</span>
       </div>`;
     watchPage();
