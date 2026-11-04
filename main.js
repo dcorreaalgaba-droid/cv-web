@@ -19,8 +19,13 @@
     arrow: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h10v10h-2V9.4L7.4 18 6 16.6 14.6 8H8z" fill="currentColor"/></svg>',
   };
 
-  const tile = (name, extra = "") =>
-    `<span class="tile ${extra}" aria-hidden="true">${esc(cv.monograms[name] || initials(name))}</span>`;
+  const tile = (name, extra = "") => {
+    const logos = cv.logos[name];
+    if (!logos) return `<span class="tile tile-text ${extra}" aria-hidden="true">${esc(cv.monograms[name] || initials(name))}</span>`;
+    return `<span class="tiles">${logos
+      .map((l) => `<span class="tile ${extra}"><img src="assets/logos/${esc(l)}.jpg" alt="" width="100" height="100"></span>`)
+      .join("")}</span>`;
+  };
   const chips = (items) =>
     items.length ? `<ul class="chips">${items.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : "";
   const pendingMark = (t, on) => (on ? `<span class="pending-mark">${esc(t.ui.pending)}</span>` : "");
@@ -79,6 +84,7 @@
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="shell hero-grid">
           <div class="hero-copy">
+            ${cv.photo ? `<img class="hero-photo" src="${esc(cv.photo)}" alt="${esc(fullName)}" width="400" height="400">` : ""}
             <p class="eyebrow">${esc(t.hero.eyebrow)}</p>
             <h1 id="hero-title" class="hero-name">${cv.name.map((n) => `<span>${esc(n)}</span>`).join(" ")}</h1>
             <p class="hero-roles">${t.hero.roles.map((r) => `<span>${esc(r)}</span>`).join("")}</p>

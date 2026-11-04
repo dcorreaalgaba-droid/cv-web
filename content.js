@@ -1,24 +1,33 @@
 /*
  * Todo el texto de la web está aquí. Para actualizar el CV solo hay que tocar este archivo.
  * `pending: true` muestra una marca "Por completar": quítala cuando el dato sea definitivo.
- * Para añadir foto: guárdala en assets/ y pon su ruta en `photo` (p. ej. "assets/foto.jpg").
+ * Para cambiar la foto: sustituye assets/foto.jpg por la nueva, con el mismo nombre.
  */
 window.CV = {
   name: ["David", "Correa"],
-  photo: null,
+  photo: "assets/foto.jpg",
   email: ["dcorreaalgaba", "gmail.com"], // se une en el navegador para dificultar el spam
   linkedin: "https://www.linkedin.com/in/davidcorreaalg/",
   linkedinLabel: "linkedin.com/in/davidcorreaalg",
 
-  // Siglas de los iconos cuando las iniciales automáticas no quedan bien
+  // Logos de assets/logos/ para cada nombre que aparece en la web
+  logos: {
+    "Exus": ["exus"],
+    "Kynaxis": ["kynaxis"],
+    "Banco Santander (CIB)": ["santander"],
+    "Kynaxis / Banco Santander (CIB)": ["kynaxis", "santander"],
+    "WiZink Bank": ["wizink"],
+    "Universidad Complutense": ["ucm"],
+    "Universidad Complutense de Madrid": ["ucm"],
+    "Universidad Nebrija": ["nebrija"],
+    "CFA Institute": ["cfa"],
+    "IEB": ["ieb"],
+    "Mirabal International School": ["mirabal"],
+  },
+  // Siglas para quien no tenga logo
   monograms: {
-    "Kynaxis / Banco Santander (CIB)": "KS",
-    "Universidad Complutense de Madrid": "UCM",
-    "Universidad Complutense": "UCM",
-    "CFA Institute": "CFA",
     "Programa Erasmus+": "E+",
     "Erasmus+ Programme": "E+",
-    "IEB": "IEB",
   },
 
   es: {
