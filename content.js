@@ -29,6 +29,19 @@ window.CV = {
     "Erasmus+ Programme": ["erasmus"],
   },
   wideLogos: ["erasmus"], // logos apaisados, en un recuadro más ancho
+  // Nombre y web oficial a la que lleva cada logo
+  logoInfo: {
+    exus: { name: "Exus", url: "https://www.exusrenewables.com/" },
+    kynaxis: { name: "Kynaxis", url: "https://www.kynaxis.com/" },
+    santander: { name: "Banco Santander", url: "https://www.santander.com/" },
+    wizink: { name: "WiZink", url: "https://www.wizink.es/" },
+    ucm: { name: "Universidad Complutense de Madrid", url: "https://www.ucm.es/" },
+    nebrija: { name: "Universidad Nebrija", url: "https://www.nebrija.com/" },
+    cfa: { name: "CFA Institute", url: "https://www.cfainstitute.org/" },
+    ieb: { name: "IEB", url: "https://www.ieb.es/" },
+    mirabal: { name: "Mirabal International School", url: "https://www.colegiomirabal.com/" },
+    erasmus: { name: "Erasmus+", url: "https://erasmus-plus.ec.europa.eu/" },
+  },
 
   es: {
     meta: {

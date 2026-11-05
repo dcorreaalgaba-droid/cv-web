@@ -23,7 +23,10 @@
     const logos = cv.logos[name];
     if (!logos) return `<span class="tile tile-text ${extra}" aria-hidden="true">${esc(initials(name))}</span>`;
     return `<span class="tiles">${logos
-      .map((l) => `<span class="tile ${extra} ${cv.wideLogos.includes(l) ? "tile-wide" : ""}"><img src="assets/logos/${esc(l)}.jpg" alt="" width="100" height="100"></span>`)
+      .map((l) => {
+        const info = cv.logoInfo[l];
+        return `<a class="tile ${extra} ${cv.wideLogos.includes(l) ? "tile-wide" : ""}" href="${esc(info.url)}" target="_blank" rel="noopener" title="${esc(info.name)}"><img src="assets/logos/${esc(l)}.jpg" alt="${esc(info.name)}" width="100" height="100"></a>`;
+      })
       .join("")}</span>`;
   };
   const chips = (items) =>
@@ -109,7 +112,7 @@
     const jobs = t.experience
       .map(
         (e) => `
-        <article class="entry reveal">
+        <article class="entry reveal ${e.current ? "entry-current" : ""}">
           <div class="entry-date">
             <span>${esc(e.date)}</span>
             ${e.duration ? `<small>${esc(e.duration)}</small>` : ""}
