@@ -65,14 +65,14 @@ window.CV = {
       eyebrow: "Controller en Exus, Madrid",
       roles: ["Digitalización y automatización", "IFRS 9", "Tesorería"],
       statement:
-        "Controller de digitalización y automatización, con experiencia previa en banca: transformación IFRS 9, coberturas contables, tesorería y reporting que conecta a finanzas con tecnología.",
+        "Conecto finanzas y tecnología: reporting en Power BI y automatización con Python, con experiencia previa en banca en IFRS 9, coberturas contables y tesorería.",
     },
     facts: [
       { label: "Ahora", value: "Controller, Exus", note: "Digitalización y automatización" },
       { label: "Experiencia", value: "Banca y finanzas", note: "Banco Santander CIB, WiZink Bank" },
       { label: "Especialidad", value: "IFRS 9 y coberturas", note: "Tesorería y reporting regulatorio" },
       { label: "Formación", value: "Doble Grado, UCM", note: "Gestión y Administración Pública y Economía" },
-      { label: "Certificación", value: "CFA Level 1", note: "Candidato 2026" },
+      { label: "Certificación", value: "CFA Level 1", note: "Candidato, febrero de 2027" },
       { label: "Idiomas", value: "Español, inglés (C1)", note: "Alemán básico" },
       { label: "Ubicación", value: "Madrid, España" },
     ],
@@ -85,6 +85,7 @@ window.CV = {
         role: "Controller de Digitalización y Automatización",
         where: "Madrid, España",
         current: true,
+        summary: "Control de gestión y automatización del reporting financiero para las filiales del grupo.",
         bullets: [
           "Rediseño del modelo de reporting financiero en Power BI.",
           "Diseño de un modelo de reporting escalable para todas las filiales del grupo.",
@@ -129,10 +130,10 @@ window.CV = {
     educationIntro: "Una base doble en economía y administración pública, ampliada ahora con el programa CFA.",
     education: [
       {
-        date: "2026",
+        date: "Feb 2027",
         school: "CFA Institute",
         title: "CFA Level 1",
-        note: "Candidato 2026",
+        note: "Candidato",
       },
       {
         date: "Feb – Ago 2024",
@@ -180,7 +181,7 @@ window.CV = {
       {
         title: "Herramientas",
         note: "Con lo que trabajo",
-        items: ["Excel: Power Query, tablas dinámicas, reporting", "Power BI", "Dynamics 365", "Python básico", "Git"],
+        items: ["Excel: Power Query, tablas dinámicas, reporting", "Power BI", "Dynamics 365", "Python", "Git"],
       },
     ],
     languages: {
@@ -219,14 +220,14 @@ window.CV = {
       eyebrow: "Controller at Exus, Madrid",
       roles: ["Digitalisation & Automation", "IFRS 9", "Treasury"],
       statement:
-        "Digitalisation and automation controller with a background in banking: IFRS 9 transformation, hedge accounting, treasury and reporting that connects finance with technology.",
+        "I connect finance and technology: Power BI reporting and Python automation, with a banking background in IFRS 9, hedge accounting and treasury.",
     },
     facts: [
       { label: "Now", value: "Controller, Exus", note: "Digitalisation and automation" },
       { label: "Experience", value: "Banking and finance", note: "Banco Santander CIB, WiZink Bank" },
       { label: "Focus", value: "IFRS 9 and hedging", note: "Treasury and regulatory reporting" },
       { label: "Education", value: "Double degree, UCM", note: "Economics and Public Administration" },
-      { label: "Certification", value: "CFA Level 1", note: "2026 candidate" },
+      { label: "Certification", value: "CFA Level 1", note: "Candidate, February 2027" },
       { label: "Languages", value: "Spanish, English (C1)", note: "Basic German" },
       { label: "Based in", value: "Madrid, Spain" },
     ],
@@ -239,6 +240,7 @@ window.CV = {
         role: "Digitalisation & Automation Controller",
         where: "Madrid, Spain",
         current: true,
+        summary: "Management control and financial reporting automation for the group's subsidiaries.",
         bullets: [
           "Redesigned the financial reporting model in Power BI.",
           "Designed a scalable reporting model for all group subsidiaries.",
@@ -283,10 +285,10 @@ window.CV = {
     educationIntro: "A double foundation in economics and public administration, now extended with the CFA programme.",
     education: [
       {
-        date: "2026",
+        date: "Feb 2027",
         school: "CFA Institute",
         title: "CFA Level 1",
-        note: "2026 candidate",
+        note: "Candidate",
       },
       {
         date: "Feb – Aug 2024",
@@ -334,7 +336,7 @@ window.CV = {
       {
         title: "Tools",
         note: "What I work with",
-        items: ["Excel: Power Query, pivot tables, reporting", "Power BI", "Dynamics 365", "Basic Python", "Git"],
+        items: ["Excel: Power Query, pivot tables, reporting", "Power BI", "Dynamics 365", "Python", "Git"],
       },
     ],
     languages: {

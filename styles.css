@@ -255,6 +255,8 @@ svg { width: 1.1em; height: 1.1em; flex: none; }
 @media (max-width: 40rem) {
   body { font-size: 1rem; }
   .nav-actions .btn span { display: none; }
+  .hero-roles { gap: .15rem 1.1rem; }
+  .hero-roles span::after { display: none; }
   .nav-actions .btn { padding-inline: .7rem; }
   .hero-actions .btn { flex: 1 1 auto; }
   .section-head { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
