@@ -93,7 +93,7 @@
             <div class="hero-actions">
               <a class="btn btn-solid" href="mailto:${esc(emailAddress)}">${icons.mail}${esc(t.ui.email)}</a>
               <a class="btn" href="${esc(cv.linkedin)}" target="_blank" rel="noopener">${icons.linkedin}LinkedIn</a>
-              <button class="btn" type="button" data-print>${icons.download}${esc(t.ui.download)}</button>
+              <a class="btn" href="${esc(t.ui.cvFile)}" download="David_Correa_CV.pdf">${icons.download}${esc(t.ui.download)}</a>
             </div>
           </div>
           <dl class="facts">${facts}</dl>
@@ -282,14 +282,6 @@
       const y = window.scrollY;
       render(lang);
       window.scrollTo(0, y);
-      return;
-    }
-    if (event.target.closest("[data-print]")) {
-      // El título del documento es el nombre que propone el navegador al guardar el PDF.
-      const title = document.title;
-      document.title = "David_Correa_CV";
-      window.addEventListener("afterprint", () => { document.title = title; }, { once: true });
-      window.print();
     }
   });
 

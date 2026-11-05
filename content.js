@@ -1,6 +1,7 @@
 /*
  * Todo el texto de la web está aquí. Para actualizar el CV solo hay que tocar este archivo.
  * `pending: true` muestra una marca "Por completar": quítala cuando el dato sea definitivo.
+ * Tras cambiar el texto, ejecuta scripts/build-cv.sh para regenerar los PDF del botón «Descargar CV».
  * Para cambiar la foto: sustituye assets/foto.jpg por la nueva, con el mismo nombre.
  */
 window.CV = {
@@ -40,6 +41,7 @@ window.CV = {
       nav: { experience: "Experiencia", education: "Formación", skills: "Competencias", contact: "Contacto" },
       email: "Escríbeme",
       download: "Descargar CV",
+      cvFile: "assets/David_Correa_CV_ES.pdf",
       career: "Trayectoria",
       current: "Puesto actual",
       pending: "Por completar",
@@ -193,6 +195,7 @@ window.CV = {
       nav: { experience: "Experience", education: "Education", skills: "Skills", contact: "Contact" },
       email: "Email me",
       download: "Download CV",
+      cvFile: "assets/David_Correa_CV_EN.pdf",
       career: "Career so far",
       current: "Current role",
       pending: "To complete",

@@ -261,60 +261,73 @@ svg { width: 1.1em; height: 1.1em; flex: none; }
   .cards { grid-template-columns: 1fr; }
 }
 
-/* CV en PDF: «Descargar CV» imprime esta misma página en formato de una hoja */
+/* CV en PDF: scripts/build-cv.sh genera con estas reglas los archivos que descarga el botón */
 @media print {
-  @page { size: A4; margin: 13mm 14mm; }
-  html, body { background: #fff; font-size: 9.6pt; line-height: 1.34; }
+  @page { size: A4; margin: 0; }
+  html, body { background: #fff; font-size: 10pt; line-height: 1.42; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  /* Los márgenes van en el cuerpo para que salgan igual en cualquier navegador */
+  body { padding: 15mm 18mm 0 25mm; }
+  body::before {
+    content: ""; position: fixed; left: 0; top: 0; bottom: 0; width: 7mm;
+    background: linear-gradient(180deg, var(--brand-deep), var(--brand-mid) 55%, var(--brand-bright));
+  }
   .nav, .skip, .facts, .career, .hero-actions, .head-link, .contact, .footer, .tile, .tiles, .hero-photo, .chips,
   .pending-mark, .status, .entry::before, .entry::after, .entry-summary { display: none !important; }
   .will-reveal, .reveal { opacity: 1 !important; transform: none !important; }
   .shell { width: 100%; }
   .hero { padding: 0; background: none; color: var(--ink); }
-  .hero-roles span:not(:last-child)::after { color: var(--line-2); }
   .hero-grid { display: block; }
   .eyebrow { display: none; }
-  .hero-name { margin: 0; font-size: 23pt; line-height: 1; }
+  .hero-name { margin: 0; color: var(--brand-deep); font-size: 27pt; line-height: 1; }
   .hero-name span { display: inline; }
-  .hero-roles { margin-top: 3pt; font-size: 10pt; }
-  .hero-statement { max-width: none; margin-top: 6pt; font-size: 9.6pt; line-height: 1.34; }
-  .print-contact { display: block; margin-top: 4pt; color: var(--ink-2); font-size: 9pt; }
-  .section { padding: 9pt 0 0 !important; }
-  .section-head { display: block; margin-bottom: 4pt; padding-bottom: 2pt; border-bottom: .75pt solid var(--ink); }
-  .section-head h2 { font-size: 11pt; letter-spacing: 0; text-transform: uppercase; }
+  .hero-roles { margin-top: 6pt; color: var(--brand-mid); font-size: 10.5pt; }
+  .hero-roles span:not(:last-child)::after { color: var(--line-2); }
+  .hero-statement { max-width: none; margin-top: 8pt; font-size: 10pt; line-height: 1.42; }
+  .print-contact { display: block; margin-top: 6pt; color: var(--ink-2); font-size: 9.2pt; }
+  .section { padding: 11pt 0 0 !important; }
+  .section-head { display: block; margin-bottom: 7pt; padding-bottom: 3pt; border-bottom: 1pt solid var(--brand-bright); }
+  .section-head h2 { color: var(--brand-mid); font-size: 11pt; line-height: 1.2; letter-spacing: .03em; text-transform: uppercase; }
   .section-head p { display: none; }
   .entry, .entry-compact {
-    display: grid; grid-template-columns: 1fr auto; gap: 0 10pt;
-    padding: 0 0 6pt; break-inside: avoid;
+    display: grid; grid-template-columns: 1fr auto; gap: 0 12pt;
+    padding: 0 0 8pt; break-inside: avoid;
   }
-  .entry-date { grid-column: 2; grid-row: 1; text-align: right; font-size: 8.8pt; }
+  .entry-date { grid-column: 2; grid-row: 1; color: var(--ink-2); text-align: right; font-size: 9.2pt; }
   .entry-date small { display: none; }
   .entry-main { grid-column: 1; grid-row: 1; padding: 0; }
-  .entry-company { display: inline; }
-  .entry-company h3 { display: inline; font-size: 10pt; letter-spacing: 0; font-stretch: 100%; }
-  .entry-role { margin: 0; font-weight: 500; }
-  .entry-where { font-size: 8.8pt; }
-  .entry-detail { grid-column: 1 / -1; padding: 0; margin-top: 2pt; }
-  .bullets li + li { margin-top: 1pt; }
+  .entry-company { display: block; }
+  .entry-company h3 { font-size: 10.5pt; line-height: 1.3; letter-spacing: 0; font-stretch: 100%; }
+  .entry-role { display: inline; margin: 0; font-weight: 500; }
+  .entry-where { display: inline; color: var(--muted); font-size: 9.2pt; }
+  .entry-where::before { content: " · "; }
+  .entry-compact { padding-bottom: 6pt; }
+  .entry-compact .entry-company { display: inline; }
+  .entry-compact .entry-company h3 { display: inline; font-size: 10pt; }
+  .entry-compact .entry-role::before { content: " · "; }
+  .entry-detail { grid-column: 1 / -1; padding: 0; margin-top: 3pt; }
+  .entry-detail:empty { display: none; }
+  .bullets li { padding-left: 10pt; }
+  .bullets li + li { margin-top: 1.5pt; }
+  .bullets li::before { top: .55em; width: 3pt; height: 3pt; border-radius: 50%; background: var(--brand-mid); }
   .stats { display: block; }
   .stat { display: inline; padding: 0; border: 0; }
-  .stat strong, .stat span { display: inline; font-size: 9pt; font-stretch: 100%; font-weight: 400; }
+  .stat strong, .stat span { display: inline; font-size: 9.2pt; font-stretch: 100%; font-weight: 400; }
   .stat strong { font-weight: 600; }
   .stat strong::after { content: ": "; }
   .stat + .stat::before { content: " · "; }
   .cards { display: block; }
-  .card { padding: 0 0 3pt; border: 0; border-radius: 0; break-inside: avoid; }
-  .card h3 { display: inline; font-size: 9.6pt; font-stretch: 100%; }
+  .card { padding: 0 0 4pt; border: 0; border-radius: 0; background: none; break-inside: avoid; }
+  .card h3 { display: inline; font-size: 10pt; font-stretch: 100%; }
   .card h3::after { content: ": "; }
   .card > p { display: none; }
   .card .chips { display: inline !important; }
-  .card .chips li { display: inline; padding: 0; border: 0; background: none; font-size: 9.6pt; }
+  .card .chips li { display: inline; padding: 0; border: 0; background: none; font-size: 10pt; }
   .card .chips li + li::before { content: " · "; }
   .lang-list { display: inline; margin: 0; }
   .lang-row { display: inline; padding: 0; border: 0 !important; }
   .lang-row strong { display: inline; font-weight: 400; }
-  .lang-row strong::after { content: " "; }
-  .lang-row span { font-size: 9.6pt; color: inherit; }
-  .lang-row span::before { content: "("; }
-  .lang-row span::after { content: ")"; }
+  .lang-row strong::after { content: ": "; }
+  .lang-row span { font-size: 10pt; color: inherit; }
   .lang-row + .lang-row::before { content: " · "; }
 }
